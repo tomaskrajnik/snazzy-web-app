@@ -1,0 +1,61 @@
+.dashboard {
+  &__header {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+
+    & h1 {
+      margin-right: 30px;
+      margin-bottom: 3px;
+    }
+
+    &__view {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      border-radius: 2px;
+
+      & svg {
+        display: block;
+        margin: 10px auto;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: #f1dce5;
+
+        & svg {
+          fill: var(--brand-secondary);
+        }
+      }
+      &-active {
+        background-color: #f1dce5;
+
+        & svg {
+          fill: var(--brand-secondary);
+        }
+      }
+    }
+
+    &__btn {
+      align-self: center;
+      margin-left: auto;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+
+      padding: 10px 18px 10px 13px;
+      border-radius: 5px;
+      border: 1px solid var(--brand-secondary);
+      background-color: var(--brand-secondary);
+      &:hover {
+        background-color: #9b1953;
+        transition: 0.2s ease;
+      }
+
+      & svg {
+        margin-right: 10px;
+      }
+    }
+  }
+}

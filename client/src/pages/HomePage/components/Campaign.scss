@@ -1,0 +1,82 @@
+.campaign {
+  display: flex;
+  border-radius: 10px;
+  border: solid 1px var(--secondary-gray);
+  margin-top: 35px;
+  max-width: 1300px;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    max-width: 230px;
+    height: 100%;
+    margin: 28px;
+  }
+  &__content {
+    width: 100%;
+    margin: 35px 0;
+    & h3 {
+      display: inline-block;
+      margin: 20px 0 10px 0;
+    }
+  }
+
+  &__data {
+    width: 85%;
+    max-width: 700px;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__chunk {
+    margin-right: 50px;
+    align-self: stretch;
+    &__label {
+      font-size: 12px;
+      margin-bottom: 0px;
+      color: var(--primary-gray);
+    }
+    &__data {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  }
+  &__icons {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    & svg {
+      width: 18px;
+      margin-left: 32px;
+      &:hover {
+        cursor: pointer;
+        fill: var(--brand-secondary);
+        transition: 0.3s ease-in;
+      }
+    }
+  }
+  &__btn {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--brand-secondary);
+    border: 1px solid var(--brand-secondary);
+    padding: 10px 18px 10px 13px;
+    border-radius: 5px;
+    background-color: transparent;
+    &:hover {
+      background-color: var(--brand-secondary);
+      color: white;
+      transition: 0.2s ease;
+      & svg {
+        fill: white;
+        transition: 0.2s ease;
+      }
+    }
+    & svg {
+      margin-right: 10px;
+    }
+  }
+}

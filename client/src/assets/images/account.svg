@@ -1,0 +1,7 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="person">
+    <rect id="Rectangle_203" data-name="Rectangle 203" width="24" height="24" fill="#3c4257" opacity="0"/>
+    <path id="Path_264" data-name="Path 264" d="M12,11A4,4,0,1,0,8,7a4,4,0,0,0,4,4Zm0-6a2,2,0,1,1-2,2A2,2,0,0,1,12,5Z" fill="#3c4257"/>
+    <path id="Path_265" data-name="Path 265" d="M12,13a7,7,0,0,0-7,7,1,1,0,0,0,2,0,5,5,0,1,1,10,0,1,1,0,0,0,2,0,7,7,0,0,0-7-7Z" fill="#3c4257"/>
+  </g>
+</svg>

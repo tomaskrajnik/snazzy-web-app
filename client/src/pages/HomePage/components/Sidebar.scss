@@ -1,0 +1,98 @@
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  background-color: #543172;
+
+  &__wrapper-logo-bg {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 20px 0 0 20px;
+    background-color: #6c4e86;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      background-color: #7D5F98;
+    }
+  }
+
+  &__logo {
+    width: 25px;
+    margin: 14px 13px 11px 12px;
+  }
+
+  &__logo-type {
+    height: 35px;
+    margin-left: 15px;
+  }
+
+  &__buttons-wrapper {
+    position: relative;
+    margin: 10px;
+    height: 100%;
+    margin-top: 25px;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    width: 100%;
+    padding: 12px 0;
+    margin: 5px 0;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+    flex-direction: row;
+    align-items: center;
+
+    & span {
+      line-height: 14px;
+    }
+
+    &-active {
+      background-color: #6c4e86;
+      box-shadow: inset -2px -2px 12px -1px rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover {
+      background-color: #6c4e86;
+    }
+
+    &:active {
+      box-shadow: inset -2px -2px 12px -1px rgba(0, 0, 0, 0.15);
+    }
+
+    & svg {
+      margin: 0 10px;
+    }
+
+    &__campaign {
+      margin: 44px 0 18px 0;
+      border-radius: 0;
+      background-color: var(--brand-secondary);
+      padding: 20px 0;
+
+      &:hover {
+        background-color: #9b1953;
+        transition: 0.2s ease;
+      }
+    }
+
+    &__bottom {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}

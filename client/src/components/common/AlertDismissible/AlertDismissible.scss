@@ -1,0 +1,29 @@
+.alert-dismissible {
+    margin-top: 30px !important;
+    padding: 1.35rem 1.8rem !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--brand-secondary);
+    color: var(--brand-secondary);
+    background-color: rgba(175, 61, 112, 0.08);
+
+    & button {
+        padding: 1.35rem 1.8rem !important;
+    }
+
+    & p {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    & span {
+        font-weight: 700;
+    }
+
+    & a {
+        color: inherit;
+        font-weight: 700;
+    }
+}

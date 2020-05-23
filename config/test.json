@@ -1,0 +1,4 @@
+{
+  "TOKEN_PRIVATE_KEY": "1234",
+  "DB": "mongodb://localhost/snazzy_tests"
+}

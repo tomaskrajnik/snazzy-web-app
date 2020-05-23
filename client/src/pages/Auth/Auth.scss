@@ -1,0 +1,202 @@
+button:focus,
+button:active {
+  outline: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.auth {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  &__background-image {
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-6deg) skew(-6deg);
+    width: 100%;
+    top: -200px;
+    height: 650px;
+    background-color: var(--secondary-gray);
+  }
+}
+
+.auth-snazzy-logo {
+  margin-top: 3%;
+}
+
+
+.form-wrapper {
+  background-color: var(--white);
+  width: 500px;
+  padding: 47px 57px;
+  border-radius: 3px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+
+  & h2 {
+    color: var(--brand-primary);
+    font-weight: 400;
+  }
+
+  input {
+    &:not([type="checkbox"]):focus {
+      border: 1px solid var(--brand-secondary) !important;
+      box-shadow: none;
+    }
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: var(--brand-secondary);
+  }
+
+  button {
+    color: var(--brand-secondary);
+
+    :focus {
+      outline: 0 !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    &:hover {
+      color: rgb(155, 25, 83);
+    }
+  }
+
+  button[type="submit"] {
+    color: var(--white);
+    background-color: var(--brand-secondary);
+    border-color: var(--brand-secondary);
+    margin-top: 50px;
+
+    &:hover {
+      background-color: rgb(155, 25, 83);
+      border-color: rgb(155, 25, 83);
+    }
+
+    &:active {
+      background-color: rgb(155, 25, 83) !important;
+      border-color: rgb(155, 25, 83) !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.text-wrapper {
+  padding: 47px 57px;
+  max-width: 500px;
+
+  & h1 {
+    color: var(--brand-primary);
+  }
+
+  & p {
+    max-width: 320px;
+  }
+}
+
+.linkToOtherAuth {
+  color: var(--brand-secondary);
+  font-weight: 700;
+
+  &:hover {
+    color: rgb(155, 25, 83);
+    text-decoration: none;
+  }
+}
+
+.backtoSnazzy {
+  & a {
+    color: var(--brand-primary) !important;
+  }
+}
+
+.whatWeOffer {
+  margin-top: 1rem;
+  list-style: none;
+  font-size: 18px;
+
+  &:before {
+    content: url("./../../assets/images/what-we-offer-check.svg");
+    margin-right: 15px;
+  }
+
+  & h3 {
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+  }
+}
+
+.not-found-block {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  padding: 80px;
+  background-color: var(--white);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  text-align: left;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.006),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.008),
+    0 12.5px 10px rgba(0, 0, 0, 0.01),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.012),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.014),
+    0 100px 80px rgba(0, 0, 0, 0.02);
+  flex-grow: 0;
+
+  & span {
+    color: var(--brand-secondary);
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .text-wrapper {
+    display: none;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .auth {
+    padding: 5%;
+
+    &__background-image {
+      display: none;
+    }
+  }
+
+  .form-wrapper {
+    background-color: var(--white);
+    width: 100%;
+    padding: 47px 57px;
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 0;
+
+    & img {
+      display: none;
+    }
+
+  }
+
+  .register-form {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+
+  .margin-fix {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .not-found-block {
+    padding: 10px;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;700&display=swap");
+
+
+:root {
+  --font-family-headers: "Inter", sans-serif;
+  --font-family-primary: "Roboto", sans-serif;
+
+  --font-size-primary: 16px;
+  --line-height-primary: 24px;
+
+  --font-size-small: 16px;
+  --line-height-small: 24px;
+
+  --font-size-h1: 42px;
+  --line-height-h1: 56px;
+
+  --font-size-h2: 24px;
+  --line-height-h2: 32px;
+
+  --font-size-h3: 18px;
+  --line-height-h3: 26px;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  color: var(--font-color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headers);
+}
+
+h1 {
+  font-size: (var(--font-size-h1));
+  line-height: var(--line-height-h1);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: (var(--font-size-h2));
+  line-height: var(--line-height-h2);
+  font-weight: 500;
+}
+
+h3 {
+  font-size: (var(--font-size-h3));
+  line-height: var(--line-height-h3);
+  font-weight: 500;
+}
+
+p {
+  font-size: (var(--font-size-primary));
+  line-height: var(--line-height-primary);
+}
+
+input[type="password"] {
+  letter-spacing: 3px;
+}
