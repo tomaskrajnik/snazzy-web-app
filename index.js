@@ -13,8 +13,8 @@ const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
   logger.log.info(`Starting application on port ${port}`);
 });
-const path = require("path");
+// const path = require("path");
 
-app.use("*", express.static(path.join(__dirname, "client", "build")));
+// app.use("*", express.static(path.join(__dirname, "client", "build")));
 
 module.exports = server;
