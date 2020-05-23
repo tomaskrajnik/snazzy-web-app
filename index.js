@@ -13,8 +13,11 @@ const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
   logger.log.info(`Starting application on port ${port}`);
 });
-// const path = require("path");
 
-// app.use("*", express.static(path.join(__dirname, "client", "build")));
+const path = require("path");
+if (process.env.NODE_ENV === "production") {
+  console.log("smth");
+  app.use("*", express.static(path.join(__dirname, "client", "build")));
+}
 
 module.exports = server;
