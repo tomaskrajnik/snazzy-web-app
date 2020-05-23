@@ -15,8 +15,6 @@ const server = app.listen(port, () => {
 });
 const path = require("path");
 
-app.use(function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+app.use("*", express.static(path.join(__dirname, "client", "build")));
 
 module.exports = server;
