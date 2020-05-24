@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const logger = require("./startup/logger");
 const Airbrake = require("@airbrake/node");
+const path = require("path");
 
 new Airbrake.Notifier({
   projectId: 274270,
@@ -10,6 +11,22 @@ new Airbrake.Notifier({
 });
 
 require("./startup/cors")(app);
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("./../client/build"));
+  app.get("/*", function (req, res) {
+    res.sendFile(path.join(__dirname, "./../client/build/index.html"));
+  });
+} else {
+  app.use(express.static(path.join(__dirname, "./.../client/public")));
+  app.get("/*", function (req, res) {
+    res.sendFile(path.join(__dirname, "./../client/public/index.html"));
+  });
+}
+
 require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/config");
