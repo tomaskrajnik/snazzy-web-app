@@ -1,10 +1,9 @@
 const express = require("express");
 const app = express();
 const logger = require("./startup/logger");
-const router = require("express").Router();
 
 // const register = require("./routes/register");
-// const login = require("./routes/login");
+const login = require("./routes/login");
 // const profile = require("./routes/profile");
 // const plans = require("./routes/plans");
 const path = require("path");
@@ -18,9 +17,9 @@ app.use(express.json());
 app.use(express.static("client/build"));
 
 // app.use("api/register", register);
-// router.use("/api/login", login);
-// router.use("/api/profile", profile);
-// router.use("/api/plans", plans);
+// app.use("/api/login", login);
+// app.use("/api/profile", profile);
+// app.use("/api/plans", plans);
 // require("./startup/routes")(app);
 
 router.use(function (req, res) {
