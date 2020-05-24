@@ -4,10 +4,9 @@ const logger = require("./startup/logger");
 const path = require("path");
 
 require("./startup/cors")(app);
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+require("./startup/routes")(app);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("/*", function (req, res) {
@@ -20,7 +19,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/config");
 require("./startup/prod")(app);

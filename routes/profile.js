@@ -6,16 +6,10 @@ const validateObjectId = require("./../middleware/validateObjectId");
 
 router.get("/:id", [auth, validateObjectId], async (req, res) => {
   const user = await User.findById(req.params.id).select("-password");
-
   if (!user)
     return res.status(404).send("User with the given id does not exist");
 
-  res.status(200).send(user);
-});
-
-router.get("/", async (req, res) => {
-  const users = await User.find().sort("name");
-  res.status(200).send(users);
+  res.send(user);
 });
 
 module.exports = router;
