@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const logger = require("./startup/logger");
-const error = require("./middleware/error");
+// const error = require("./middleware/error");
 
 // const register = require("./routes/register");
 // const login = require("./routes/login");
@@ -28,7 +28,7 @@ require("./startup/db")();
 require("./startup/config");
 require("./startup/prod")(app);
 
-app.use(error);
+// app.use(error);
 
 const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
