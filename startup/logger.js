@@ -24,7 +24,7 @@ log.add(
     db:
       "mongodb://heroku_q47pqhh3:ls55aahjg9hiuhf100popg24at@ds263707.mlab.com:63707/heroku_q47pqhh3",
     collection: "logs",
-    level: "error",
+    level: "info",
     capped: true,
   })
 );
