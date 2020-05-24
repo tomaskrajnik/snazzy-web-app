@@ -12,7 +12,7 @@ new Airbrake.Notifier({
 require("./startup/cors")(app);
 require("./startup/routes")(app);
 require("./startup/db")();
-// require("./startup/config");
+require("./startup/config");
 require("./startup/prod")(app);
 
 const port = process.env.PORT || 5000;
