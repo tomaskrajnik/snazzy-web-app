@@ -3,7 +3,7 @@ const app = express();
 const logger = require("./startup/logger");
 
 require("./startup/cors")(app);
-// app.use(express.static("client/build"));
+app.use(express.static("client/build"));
 require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/config");

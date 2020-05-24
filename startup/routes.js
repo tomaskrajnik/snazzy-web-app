@@ -13,7 +13,7 @@ module.exports = function (app) {
       type: "application/json",
     })
   );
-  app.use(express.static("client/build"));
+
   app.use("/api/register", register);
   app.use("/api/login", login);
   app.use("/api/profile", profile);
