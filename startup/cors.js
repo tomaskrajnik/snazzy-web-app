@@ -8,5 +8,3 @@ module.exports = function (app) {
 
   app.use(cors(corsOptions));
 };
-
-const cors = require("cors");
