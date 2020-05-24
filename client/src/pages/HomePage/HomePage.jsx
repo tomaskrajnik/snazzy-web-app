@@ -18,6 +18,7 @@ const HomePage = ({ token, removeToken }) => {
         const response = (await userService(id, token)).data;
         setUser(response);
         setIsLoading(false);
+        console.log(response);
       } catch (err) {
         console.log(err);
       }
@@ -35,7 +36,7 @@ const HomePage = ({ token, removeToken }) => {
   if (!token) {
     return <Redirect to="/auth" />;
   }
-  console.log(user);
+
   return (
     <React.Fragment>
       {isLoading ? (
