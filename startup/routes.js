@@ -7,12 +7,12 @@ const plans = require("./../routes/plans");
 
 module.exports = function (app) {
   app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
-  app.use(express.static("client/build"));
+  // app.use(express.urlencoded({ extended: true }));
+
   // app.use("/api/register", register);
   // app.use("/api/login", login);
   // app.use("/api/profile", profile);
   // app.use("/api/plans", plans);
 
-  // app.use(error);
+  app.use(error);
 };
