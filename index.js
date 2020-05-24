@@ -3,10 +3,10 @@ const app = express();
 const logger = require("./startup/logger");
 const router = require("express").Router();
 
-const register = require("./routes/register");
-const login = require("./routes/login");
-const profile = require("./routes/profile");
-const plans = require("./routes/plans");
+// const register = require("./routes/register");
+// const login = require("./routes/login");
+// const profile = require("./routes/profile");
+// const plans = require("./routes/plans");
 const path = require("path");
 
 require("./startup/cors")(app);
