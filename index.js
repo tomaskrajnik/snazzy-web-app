@@ -1,13 +1,26 @@
 const express = require("express");
 const app = express();
 const logger = require("./startup/logger");
+const path = require("path");
 
 require("./startup/cors")(app);
-app.use(express.static("client/build"));
+
 require("./startup/routes")(app);
 require("./startup/db")();
 // require("./startup/config");
 require("./startup/prod")(app);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("/*", function (req, res) {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  });
+} else {
+  app.use(express.static(path.join(__dirname, "/client/public")));
+  app.get("/*", function (req, res) {
+    res.sendFile(path.join(__dirname, "./client/public/index.html"));
+  });
+}
 
 const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
