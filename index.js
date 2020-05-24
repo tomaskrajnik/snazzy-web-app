@@ -7,6 +7,7 @@ require("./startup/cors")(app);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 require("./startup/routes")(app);
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("/*", function (req, res) {
