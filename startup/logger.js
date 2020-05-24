@@ -14,19 +14,22 @@ const log = winston.createLogger({
     new winston.transports.File({
       filename: path.join(logPath, "error.log"),
       handleExceptions: true,
-      level: "error",
+      level: "info",
     }),
   ],
 });
 
+log.add(
+  new winston.transports.MongoDB({
+    db:
+      "mongodb://heroku_q47pqhh3:ls55aahjg9hiuhf100popg24at@ds263707.mlab.com:63707/heroku_q47pqhh3",
+    collection: "logs",
+    level: "error",
+    capped: true,
+  })
+);
+
 if (process.env.NODE_ENV !== "production") {
-  log.add(
-    new winston.transports.MongoDB({
-      level: "info",
-      db:
-        "mongodb://heroku_q47pqhh3:ls55aahjg9hiuhf100popg24at@ds263707.mlab.com:63707/heroku_q47pqhh3/logs",
-    })
-  );
   log.add(
     new winston.transports.Console({
       format: winston.format.combine(
