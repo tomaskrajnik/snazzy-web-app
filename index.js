@@ -27,6 +27,7 @@ require("./startup/prod")(app);
 
 const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
+  throw new Error("I am an uncaught exception");
   logger.log.info(`Starting application on port ${port}`);
 });
 
