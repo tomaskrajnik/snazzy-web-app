@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const logger = require("./startup/logger");
-const error = require("./../middleware/error");
+const error = require("./middleware/error");
 
 // const register = require("./routes/register");
 // const login = require("./routes/login");
@@ -13,8 +13,6 @@ require("./startup/cors")(app);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// ADD THIS LINE
 app.use(express.static("client/build"));
 
 // app.use("api/register", register);
@@ -36,11 +34,5 @@ const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
   logger.log.info(`Starting application on port ${port}`);
 });
-
-// const path = require("path");
-// if (process.env.NODE_ENV === "production") {
-//   console.log("smth");
-//   app.use("*", express.static(path.join(__dirname, "client", "build")));
-// }
 
 module.exports = server;
