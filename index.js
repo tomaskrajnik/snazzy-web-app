@@ -11,7 +11,7 @@ app.use("/api/register", register);
 app.use("/api/login", login);
 app.use("/api/profile", profile);
 app.use("/api/plans", plans);
-require("./startup/routes")(app);
+// require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/config");
 require("./startup/prod")(app);
