@@ -8,7 +8,7 @@ new Airbrake.Notifier({
   projectKey: "4830ba04a44285a222e351b2ceab91c5",
   environment: "production",
 });
-
+throw new Error("I am an uncaught exception");
 require("./startup/cors")(app);
 require("./startup/routes")(app);
 require("./startup/db")();
