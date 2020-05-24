@@ -5,11 +5,6 @@ const path = require("path");
 
 require("./startup/cors")(app);
 
-require("./startup/routes")(app);
-require("./startup/db")();
-// require("./startup/config");
-require("./startup/prod")(app);
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("/*", function (req, res) {
@@ -21,6 +16,11 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "./client/public/index.html"));
   });
 }
+
+require("./startup/routes")(app);
+require("./startup/db")();
+// require("./startup/config");
+require("./startup/prod")(app);
 
 const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
