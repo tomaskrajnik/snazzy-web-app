@@ -18,7 +18,6 @@ const HomePage = ({ token, removeToken }) => {
         const response = (await userService(id, token)).data;
         setUser(response);
         setIsLoading(false);
-        console.log(response);
       } catch (err) {
         console.log(err);
       }
@@ -44,7 +43,7 @@ const HomePage = ({ token, removeToken }) => {
       ) : (
         <div className="homepage">
           <Sidebar />
-          {/* <Topbar onLogOut={handleLogOut} user={user} /> */}
+          <Topbar onLogOut={handleLogOut} user={user} />
           <div className="homepage__content">
             <Dashboard></Dashboard>
           </div>
