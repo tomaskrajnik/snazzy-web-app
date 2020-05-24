@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
 const logger = require("./startup/logger");
+const error = require("./../middleware/error");
 
 // const register = require("./routes/register");
-const login = require("./routes/login");
+// const login = require("./routes/login");
 // const profile = require("./routes/profile");
 // const plans = require("./routes/plans");
 const path = require("path");
@@ -28,6 +29,8 @@ router.use(function (req, res) {
 require("./startup/db")();
 require("./startup/config");
 require("./startup/prod")(app);
+
+app.use(error);
 
 const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
