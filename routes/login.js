@@ -2,7 +2,7 @@ const _ = require("lodash");
 const bcrypt = require("bcrypt");
 const { User } = require("./../models/user");
 const express = require("express");
-const Joi = require("Joi");
+const Joi = require("joi");
 const router = express.Router();
 
 router.post("/", async (req, res) => {
