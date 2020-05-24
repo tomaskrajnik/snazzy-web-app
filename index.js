@@ -17,7 +17,7 @@ app.use(express.json());
 // ADD THIS LINE
 app.use(express.static("client/build"));
 
-router.use("/api/register", register);
+router.use("/register", register);
 // router.use("/api/login", login);
 // router.use("/api/profile", profile);
 // router.use("/api/plans", plans);
