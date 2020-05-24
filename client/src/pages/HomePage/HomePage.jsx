@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Redirect} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Redirect } from "react-router-dom";
 import "./Homepage.scss";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
@@ -8,7 +8,7 @@ import LoadingScreen from "../../components/common/LoadingScreen/LoadingScreen";
 import jwt from "jsonwebtoken";
 import userService from "./../../services/userService";
 
-const HomePage = ({token, removeToken}) => {
+const HomePage = ({ token, removeToken }) => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,7 +35,7 @@ const HomePage = ({token, removeToken}) => {
   if (!token) {
     return <Redirect to="/auth" />;
   }
-
+  console.log(user);
   return (
     <React.Fragment>
       {isLoading ? (
@@ -43,7 +43,7 @@ const HomePage = ({token, removeToken}) => {
       ) : (
         <div className="homepage">
           <Sidebar />
-          <Topbar onLogOut={handleLogOut} user={user} />
+          {/* <Topbar onLogOut={handleLogOut} user={user} /> */}
           <div className="homepage__content">
             <Dashboard></Dashboard>
           </div>
