@@ -7,7 +7,8 @@ const api = axios.create({
     "Content-Type": "application/json",
     "Access-Control-Allow-Headers":
       "x-requested-with, authorization, content-type",
-    "Access-Control-Expose-Headers": "x-auth-token",
+    "Access-Control-Expose-Headers":
+      "x-auth-token, Access-Control-Allow-Origin",
   },
 });
 
