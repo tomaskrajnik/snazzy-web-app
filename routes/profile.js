@@ -10,7 +10,7 @@ router.get("/:id", [auth, validateObjectId], async (req, res) => {
   if (!user)
     return res.status(404).send("User with the given id does not exist");
 
-  res.send(user);
+  res.status(200).ssend("user");
 });
 
 module.exports = router;

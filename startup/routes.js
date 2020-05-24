@@ -12,6 +12,4 @@ module.exports = function (app) {
   app.use("/api/plans", plans);
 
   app.use(error);
-
-  // const path = require("path");
 };
