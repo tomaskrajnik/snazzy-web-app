@@ -2,15 +2,20 @@ const express = require("express");
 const app = express();
 const logger = require("./startup/logger");
 
+const register = require("../routes/register");
+const login = require("./../routes/login");
+const profile = require("./../routes/profile");
+const plans = require("./../routes/plans");
+
 require("./startup/cors")(app);
 
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 app.use(express.static("client/build"));
-// app.use("/api/register", register);
-// app.use("/api/login", login);
-// app.use("/api/profile", profile);
-// app.use("/api/plans", plans);
+app.use("/api/register", register);
+app.use("/api/login", login);
+app.use("/api/profile", profile);
+app.use("/api/plans", plans);
 // require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/config");
