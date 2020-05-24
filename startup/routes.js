@@ -14,5 +14,5 @@ module.exports = function (app) {
   // app.use("/api/profile", profile);
   // app.use("/api/plans", plans);
 
-  app.use(error);
+  // app.use(error);
 };
