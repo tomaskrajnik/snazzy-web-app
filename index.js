@@ -4,8 +4,8 @@ const logger = require("./startup/logger");
 
 require("./startup/cors")(app);
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
 app.use(express.static("client/build"));
 app.use("/api/register", register);
 app.use("/api/login", login);
