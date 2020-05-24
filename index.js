@@ -1,6 +1,13 @@
 const express = require("express");
 const app = express();
 const logger = require("./startup/logger");
+const Airbrake = require("@airbrake/node");
+
+new Airbrake.Notifier({
+  projectId: 274270,
+  projectKey: "4830ba04a44285a222e351b2ceab91c5",
+  environment: "production",
+});
 
 require("./startup/cors")(app);
 require("./startup/routes")(app);
