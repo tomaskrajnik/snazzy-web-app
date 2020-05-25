@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://snazzy-web.herokuapp.com/api/",
+  baseURL: "/api/",
   headers: {
     "Access-Control-Allow-Origin": "http://localhost:5000",
     "Content-Type": "application/json",
