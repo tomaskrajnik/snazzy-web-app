@@ -6,6 +6,10 @@ const Joi = require("joi");
 const router = express.Router();
 
 router.post("/", async (req, res) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://snazzy-web.herokuapp.com/"
+  );
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
@@ -14,10 +18,7 @@ router.post("/", async (req, res) => {
 
   const validPassword = await bcrypt.compare(req.body.password, user.password);
   if (!validPassword) return res.status(400).send("Wrong email or password");
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://snazzy-web.herokuapp.com/"
-  );
+
   res.send(user.generateAuthToken());
 });
 
