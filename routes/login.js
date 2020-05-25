@@ -14,6 +14,10 @@ router.post("/", async (req, res) => {
 
   const validPassword = await bcrypt.compare(req.body.password, user.password);
   if (!validPassword) return res.status(400).send("Wrong email or password");
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://snazzy-web.herokuapp.com/"
+  );
   res.send(user.generateAuthToken());
 });
 
