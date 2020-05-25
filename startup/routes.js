@@ -6,6 +6,8 @@ const profile = require("./../routes/profile");
 const plans = require("./../routes/plans");
 
 module.exports = function (app) {
+  app.use(express.urlencoded({ extended: true }));
+  app.use(express.json());
   app.use("/api/register", register);
   app.use("/api/login", login);
   app.use("/api/profile", profile);
