@@ -8,7 +8,7 @@ module.exports = function (app) {
   // };
 
   const allowedOrigins = [
-    "https://localhost:5000",
+    "http://localhost:5000",
     "https://snazzy-web.herokuapp.com/",
   ];
   app.use(
@@ -18,7 +18,7 @@ module.exports = function (app) {
         // (like mobile apps or curl requests)
         if (!origin) return callback(null, true);
         if (allowedOrigins.indexOf(origin) === -1) {
-          const msg =
+          var msg =
             "The CORS policy for this site does not " +
             "allow access from the specified Origin.";
           return callback(new Error(msg), false);
@@ -26,6 +26,7 @@ module.exports = function (app) {
         return callback(null, true);
       },
       exposedHeaders: "x-auth-token",
+      credentials: true,
     })
   );
 };
