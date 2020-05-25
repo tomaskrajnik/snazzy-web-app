@@ -8,7 +8,7 @@ module.exports = function (app) {
   // };
 
   const allowedOrigins = [
-    "http://localhost:5000",
+    "https://localhost:5000",
     "https://snazzy-web.herokuapp.com/",
   ];
   app.use(
