@@ -10,7 +10,7 @@ module.exports = function (app) {
   } else {
     app.use(express.static(path.join(__dirname, "client/public")));
     app.get("/*", function (req, res) {
-      res.sendFile(path.join(__dirname, "./../client/build/index.html"));
+      res.sendFile(path.join(__dirname, "./../client/pulic/"));
     });
   }
 };

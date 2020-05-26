@@ -5,12 +5,19 @@ import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 import Dashboard from "./components/Dashboard";
 import LoadingScreen from "../../components/common/LoadingScreen/LoadingScreen";
+import SmallerScreen from "./components/SmallerScreen.";
 import jwt from "jsonwebtoken";
 import userService from "./../../services/userService";
+import { useMediaQuery } from "react-responsive";
 
 const HomePage = ({ token, removeToken }) => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+
+  const isTabletOrMobile = useMediaQuery({
+    query: "(max-device-width: 1224px)",
+  });
+  const isBigScreen = useMediaQuery({ query: "(min-device-width: 1225px)" });
 
   useEffect(() => {
     async function getUser(id) {
@@ -42,13 +49,20 @@ const HomePage = ({ token, removeToken }) => {
         <LoadingScreen />
       ) : (
         <div className="homepage">
-          <Sidebar />
-          <Topbar onLogOut={handleLogOut} user={user} />
-          <div className="homepage__content">
-            <Dashboard></Dashboard>
-          </div>
+          {isTabletOrMobile && (
+            <SmallerScreen onLogOut={handleLogOut} user={user} />
+          )}
+          {isBigScreen && (
+            <React.Fragment>
+              <Sidebar />
+              <Topbar onLogOut={handleLogOut} user={user} />
+              <div className="homepage__content">
+                <Dashboard></Dashboard>
+              </div>
 
-          <button>Log out</button>
+              <button>Log out</button>
+            </React.Fragment>
+          )}
         </div>
       )}
     </React.Fragment>

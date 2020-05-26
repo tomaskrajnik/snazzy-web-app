@@ -25,7 +25,12 @@ const Sidebar = () => {
         <div className="sidebar__wrapper-logo-bg">
           <img src={logoIcon} alt="" className="sidebar__logo" />
         </div>
-        <img src={logoType} alt="" className="sidebar__logo-type" />
+        <img
+          src={logoType}
+          alt=""
+          style={{ width: "70px" }}
+          className="sidebar__logo-type"
+        />
       </div>
       <button className="sidebar__button sidebar__button__campaign">
         <i data-eva="plus-circle-outline" data-eva-fill="#fff"></i>Create new

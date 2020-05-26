@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.a942df03.chunk.css",
-    "main.js": "/static/js/main.4c52596a.chunk.js",
-    "main.js.map": "/static/js/main.4c52596a.chunk.js.map",
+    "main.css": "/static/css/main.3e774182.chunk.css",
+    "main.js": "/static/js/main.df1fbd88.chunk.js",
+    "main.js.map": "/static/js/main.df1fbd88.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.30d21a6d.js",
     "runtime-main.js.map": "/static/js/runtime-main.30d21a6d.js.map",
     "static/css/2.af3c1da9.chunk.css": "/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.e57c65ad.chunk.js": "/static/js/2.e57c65ad.chunk.js",
-    "static/js/2.e57c65ad.chunk.js.map": "/static/js/2.e57c65ad.chunk.js.map",
+    "static/js/2.868a9a57.chunk.js": "/static/js/2.868a9a57.chunk.js",
+    "static/js/2.868a9a57.chunk.js.map": "/static/js/2.868a9a57.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.35b5aeaf1125f9db699316974b59fd62.js": "/precache-manifest.35b5aeaf1125f9db699316974b59fd62.js",
+    "precache-manifest.e2e93e6eef53108b439e60a1a39bcb55.js": "/precache-manifest.e2e93e6eef53108b439e60a1a39bcb55.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.a942df03.chunk.css.map": "/static/css/main.a942df03.chunk.css.map",
-    "static/js/2.e57c65ad.chunk.js.LICENSE.txt": "/static/js/2.e57c65ad.chunk.js.LICENSE.txt",
+    "static/css/main.3e774182.chunk.css.map": "/static/css/main.3e774182.chunk.css.map",
+    "static/js/2.868a9a57.chunk.js.LICENSE.txt": "/static/js/2.868a9a57.chunk.js.LICENSE.txt",
     "static/media/account.svg": "/static/media/account.02d896e4.svg",
     "static/media/auth-background-asset1.svg": "/static/media/auth-background-asset1.5e356bd1.svg",
     "static/media/auth-background-asset2.svg": "/static/media/auth-background-asset2.d0479d2d.svg",
@@ -26,7 +26,7 @@
     "static/media/Topbar.scss": "/static/media/search-icon.82aad21c.svg",
     "static/media/shopify.svg": "/static/media/shopify.cee47742.svg",
     "static/media/snazzy-logo.svg": "/static/media/snazzy-logo.7af03173.svg",
-    "static/media/snazzy-type.svg": "/static/media/snazzy-type.2b9506f3.svg",
+    "static/media/snazzy-type.svg": "/static/media/snazzy-type.1a301a67.svg",
     "static/media/snazzy_logo_auth-secondary.svg": "/static/media/snazzy_logo_auth-secondary.8f99a9b6.svg",
     "static/media/snazzy_logo_auth.svg": "/static/media/snazzy_logo_auth.3d8a2f77.svg",
     "static/media/Auth.scss": "/static/media/what-we-offer-check.2f21624e.svg",
@@ -35,8 +35,8 @@
   "entrypoints": [
     "static/js/runtime-main.30d21a6d.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.e57c65ad.chunk.js",
-    "static/css/main.a942df03.chunk.css",
-    "static/js/main.4c52596a.chunk.js"
+    "static/js/2.868a9a57.chunk.js",
+    "static/css/main.3e774182.chunk.css",
+    "static/js/main.df1fbd88.chunk.js"
   ]
 }

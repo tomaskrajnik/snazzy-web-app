@@ -23,6 +23,7 @@ router.post("/", async (req, res) => {
   };
 
   user = new User(_.pick(req.body, ["name", "email", "password", "isAdmin"]));
+
   user.selectedPlan = selectedPlan;
 
   const salt = await bcrypt.genSalt(10);
