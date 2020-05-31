@@ -20,7 +20,7 @@ const Auth = ({ token, saveToken }) => {
     <div className="auth d-flex flex-column pb-5">
       <div className="auth__background-image"></div>
       <Col className="text-center flex-grow-0 auth-snazzy-logo">
-        <a href="">
+        <a href="https://snazzy-17dd09.webflow.io/">
           <img
             onMouseEnter={changeToLogoColor}
             onMouseLeave={changeToLogoSecondaryColor}
@@ -39,7 +39,7 @@ const Auth = ({ token, saveToken }) => {
         </Route>
       </Switch>
       <Col className="backtoSnazzy text-center flex-grow-0 mt-auto mb-4">
-        <a href="#">snazzy.com</a>
+        <a href="https://snazzy-17dd09.webflow.io/">snazzy.com</a>
       </Col>
     </div>
   );
