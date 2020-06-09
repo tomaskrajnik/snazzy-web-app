@@ -70,6 +70,28 @@ button:active {
     background-color: var(--brand-secondary);
     border-color: var(--brand-secondary);
     margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    & span {
+      width: 1.2rem;
+      height: 1.2rem;
+      border-top-color: #ffffff;
+      border-top-style: solid;
+      border-top-width: 0.2em;
+      border-right-color: transparent;
+      border-right-style: solid;
+      border-right-width: 0.2em;
+      border-bottom-color: #ffffff;
+      border-bottom-style: solid;
+      border-bottom-width: 0.2em;
+      border-left-color: #ffffff;
+      border-left-style: solid;
+      border-left-width: 0.2em;
+    }
+
 
     &:hover {
       background-color: rgb(155, 25, 83);

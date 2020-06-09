@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, Spinner } from "react-bootstrap";
 import { PropTypes } from "prop-types";
 
-const SubmitButton = ({ title }) => {
+const SubmitButton = ({ title, isLoading }) => {
   const buttonStyle = {
     padding: "8px 16px",
     lineHeight: "28px",
@@ -11,6 +11,16 @@ const SubmitButton = ({ title }) => {
 
   return (
     <Button style={buttonStyle} variant="primary" type="submit" block>
+      {isLoading && (
+        <Spinner
+          as="span"
+          animation="border"
+          size="sm"
+          role="status"
+          aria-hidden="true"
+          className="mr-2"
+        />
+      )}
       {title}
     </Button>
   );
