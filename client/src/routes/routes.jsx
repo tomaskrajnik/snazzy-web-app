@@ -14,6 +14,12 @@ const Routes = ({ token, saveToken }) => {
       <Route path="/auth/register">
         <Auth token={token} saveToken={saveToken} />
       </Route>
+      <Route path="/auth/forgot-password">
+        <Auth token={token} saveToken={saveToken} />
+      </Route>
+      <Route path="/auth/reset">
+        <Auth token={token} saveToken={saveToken} />
+      </Route>
       <Route path="/dashboard">
         <HomePage token={token} removeToken={saveToken} />
       </Route>

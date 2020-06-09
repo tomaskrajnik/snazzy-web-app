@@ -85,6 +85,15 @@ button:active {
   }
 }
 
+.input-additional-btn {
+  color: var(--brand-secondary);
+
+  &:hover {
+    color: rgb(155, 25, 83);
+    text-decoration: none !important;
+  }
+}
+
 .text-wrapper {
   padding: 47px 57px;
   max-width: 500px;

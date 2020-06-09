@@ -7,4 +7,7 @@ export default {
   login(credentials) {
     return api.post("/login", credentials);
   },
+  forgotPassword(credentials) {
+    return api.post("/reset", credentials);
+  },
 };

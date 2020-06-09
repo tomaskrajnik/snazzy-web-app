@@ -4,6 +4,7 @@ const register = require("./../routes/register");
 const login = require("./../routes/login");
 const profile = require("./../routes/profile");
 const plans = require("./../routes/plans");
+const resetPassword = require("./../routes/resetPassword");
 
 module.exports = function (app) {
   app.use(express.urlencoded({ extended: true }));
@@ -12,6 +13,7 @@ module.exports = function (app) {
   app.use("/api/login", login);
   app.use("/api/profile", profile);
   app.use("/api/plans", plans);
+  app.use("/api/reset", resetPassword);
 
   app.use(error);
 };
