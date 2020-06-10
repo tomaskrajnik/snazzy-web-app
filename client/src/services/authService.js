@@ -10,4 +10,14 @@ export default {
   forgotPassword(credentials) {
     return api.post("/reset", credentials);
   },
+  verifyRecoveryLink(token) {
+    return api.get("/reset", {
+      params: {
+        resetPasswordToken: token,
+      },
+    });
+  },
+  updatePassword(credentials) {
+    return api.put("/reset", credentials);
+  },
 };
