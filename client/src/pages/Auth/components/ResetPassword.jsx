@@ -80,6 +80,7 @@ class ResetPassword extends Component {
     error.details.map((item) => (errors[item.path[0]] = item.message));
     return errors;
   };
+
   async callApi(credentials) {
     try {
       await authService.updatePassword(credentials);
