@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col, Form, Alert } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import Input from "../../../components/common/Input";
 import SubmitButton from "../../../components/common/SubmitButton";
 import LoadingScreen from "./../../../components/common/LoadingScreen/LoadingScreen";
@@ -126,32 +126,38 @@ class ResetPassword extends Component {
               {this.state.errorMessage && (
                 <Alert variant="danger">{this.state.errorMessage}</Alert>
               )}
-              <Form onSubmit={this.handleSubmit} className="mt-5">
-                <Input
-                  name="password"
-                  type="password"
-                  label="New password"
-                  onChange={this.handleChange}
-                  error={this.state.inputErrorMessages.password}
-                />
-                <Input
-                  name="repeated_password"
-                  type="password"
-                  label="Repeat new password"
-                  onChange={this.handleChange}
-                  error={this.state.inputErrorMessages.repeated_password}
-                />
-                {this.state.isSuccess && (
-                  <Alert variant="success">
-                    <b>Success! </b>
-                    Your password has been successfully changed.
-                  </Alert>
-                )}
-                <SubmitButton
-                  title="Save"
-                  isLoading={this.state.buttonLoading}
-                ></SubmitButton>
-              </Form>
+              {!this.state.errorMessage && (
+                <Form onSubmit={this.handleSubmit} className="mt-5">
+                  <Input
+                    name="password"
+                    type="password"
+                    label="New password"
+                    onChange={this.handleChange}
+                    error={this.state.inputErrorMessages.password}
+                  />
+                  <Input
+                    name="repeated_password"
+                    type="password"
+                    label="Repeat new password"
+                    onChange={this.handleChange}
+                    error={this.state.inputErrorMessages.repeated_password}
+                  />
+                  {this.state.isSuccess && (
+                    <Alert variant="success">
+                      <b>Success! </b>
+                      Your password has been successfully changed.
+                      <Link to="/" className="success-alert-link">
+                        {" "}
+                        Back to Log in page.
+                      </Link>
+                    </Alert>
+                  )}
+                  <SubmitButton
+                    title="Save"
+                    isLoading={this.state.buttonLoading}
+                  ></SubmitButton>
+                </Form>
+              )}
             </Col>
           </Row>
         )}

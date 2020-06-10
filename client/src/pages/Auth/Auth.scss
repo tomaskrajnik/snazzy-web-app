@@ -139,6 +139,17 @@ button:active {
   }
 }
 
+.success-alert-link {
+  color: #155724;
+  font-weight: 700;
+
+
+  &:hover {
+    color: #0c4419;
+    text-decoration: none;
+  }
+}
+
 .backtoSnazzy {
   & a {
     color: var(--brand-primary) !important;
