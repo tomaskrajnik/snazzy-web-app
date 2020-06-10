@@ -24,8 +24,8 @@ router.post("/", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "snazzyemailservice.staging@gmail.com",
-      pass: "Dusan502",
+      user: process.env.EMAIL_AUTH_USER,
+      pass: process.env.EMAIL_AUTH_PASSWORD,
     },
   });
   const name = user.name.trim().split(/\s(\w+)$/)[0];
