@@ -66,7 +66,7 @@ router.put("/", async (req, res) => {
   if (!user) return res.status(400).send("Invalid user id.");
 
   let password = req.body.password;
-  if (!password || password.length <= 8)
+  if (!password || password.length < 8)
     return res
       .status(400)
       .send("Password is required and must be at least 8 characters.");
