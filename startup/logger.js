@@ -2,6 +2,7 @@ const path = require("path");
 const winston = require("winston");
 require("express-async-errors");
 require("winston-mongodb");
+const db = process.env.MONGODB_URI;
 
 const logPath = "";
 
@@ -19,19 +20,17 @@ const log = winston.createLogger({
   ],
 });
 
-log.add(
-  new winston.transports.MongoDB({
-    db:
-      "mongodb://heroku_q47pqhh3:ls55aahjg9hiuhf100popg24at@ds263707.mlab.com:63707/heroku_q47pqhh3",
-    collection: "logs",
-    level: "error",
-    handleExceptions: true,
-    exitOnError: true,
-    capped: true,
-  })
-);
-
 if (process.env.NODE_ENV !== "production") {
+  log.add(
+    new winston.transports.MongoDB({
+      db: db,
+      collection: "logs",
+      level: "error",
+      handleExceptions: true,
+      exitOnError: true,
+      capped: true,
+    })
+  );
   log.add(
     new winston.transports.Console({
       format: winston.format.combine(

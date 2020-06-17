@@ -2,6 +2,8 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Register from "./components/Register";
 import LogIn from "./components/LogIn";
+import ForgotPassword from "./components/ForgotPassword";
+import ResetPassword from "./components/ResetPassword";
 import { Col } from "react-bootstrap";
 import { PropTypes } from "prop-types";
 
@@ -36,6 +38,12 @@ const Auth = ({ token, saveToken }) => {
         </Route>
         <Route path="/auth/log-in">
           <LogIn token={token} saveToken={saveToken} />
+        </Route>
+        <Route path="/auth/forgot-password">
+          <ForgotPassword />
+        </Route>
+        <Route path="/auth/reset/:token">
+          <ResetPassword />
         </Route>
       </Switch>
       <Col className="backtoSnazzy text-center flex-grow-0 mt-auto mb-4">

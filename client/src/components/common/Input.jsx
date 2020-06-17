@@ -1,6 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import { PropTypes } from "prop-types";
+import { Link } from "react-router-dom";
 
 const Input = ({
   name,
@@ -41,14 +42,13 @@ const Input = ({
         <div className="d-flex">
           {label}
           {additionalButton && (
-            <button
-              type="button"
-              onClick={handleClick}
-              className="ml-auto"
+            <Link
+              className="input-additional-btn"
               style={additionalBtnStyle}
+              to="/auth/forgot-password"
             >
               {additionalButton}
-            </button>
+            </Link>
           )}
         </div>
       </Form.Label>
