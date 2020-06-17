@@ -29,7 +29,7 @@ router.post("/", async (req, res) => {
     },
   });
   const name = user.name.trim().split(/\s(\w+)$/)[0];
-  const link = `${proces.env.ENV_LINK}/${token}`;
+  const link = `${process.env.ENV_LINK}/${token}`;
   const email_template = emailtemplate(name, link);
   const mailOptions = {
     from: "snazzyemailservice.staging@gmail.com",
