@@ -29,11 +29,12 @@ router.post("/", async (req, res) => {
     },
   });
   const name = user.name.trim().split(/\s(\w+)$/)[0];
-  const email_template = emailtemplate(name, token);
+  const link = `${proces.env.ENV_LINK}/${token}`;
+  const email_template = emailtemplate(name, link);
   const mailOptions = {
     from: "snazzyemailservice.staging@gmail.com",
     to: `${user.email}`,
-    subject: "Reset password- Snazzy",
+    subject: "Reset password - Snazzy",
     html: email_template,
   };
 

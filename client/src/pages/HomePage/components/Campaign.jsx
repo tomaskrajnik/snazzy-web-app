@@ -4,11 +4,7 @@ import "./Campaign.scss";
 const Campaign = (props) => {
   return (
     <div className="campaign">
-      <img
-        src={props.imgPath}
-        className="campaign__image"
-        alt="campaign image"
-      ></img>
+      <img src={props.imgPath} className="campaign__image" alt="campaign"></img>
       <div className="campaign__content">
         <div className="campaign__icons">
           <i data-eva="eye-outline" data-eva-fill="#A7B4CC"></i>
