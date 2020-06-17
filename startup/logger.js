@@ -20,7 +20,7 @@ const log = winston.createLogger({
   ],
 });
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV == "production") {
   log.add(
     new winston.transports.MongoDB({
       db: db,
