@@ -37,7 +37,7 @@
     "morgan": "^1.10.0",
     "nodemailer": "^6.4.8",
     "path": "^0.12.7",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "winston": "^3.2.1",
     "winston-mongodb": "^3.0.2"
   },
